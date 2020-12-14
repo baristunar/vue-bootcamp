@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Class List App</title>
+  <link rel="stylesheet" href="/assets/style.css" />
+  <script src="https://unpkg.com/vue@next"></script>
+
+
+  <style>
+    .border {
+
+      border: 10px solid black;
+
+    }
+
+    .bg-color {
+
+      background: aqua;
+    }
+
+
+    .border_radius {
+
+      border-radius: 5px;
+    }
+
+
+
+    .color {
+
+      color: red;
+    }
+
+    .font-bold {
+     font-weight: bold;
+    }
+
+    .font-italic {
+
+      font-style: italic;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <header>Class List App</header>
+  <div class="container" id="app">
+    <div class="class--list--app">
+      <div class="card">
+        <ul class="class-list">
+          <li>
+            <label>
+              <input class="mr-5" type="checkbox" v-model="changeBg" />
+              <span> Background Color</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input class="mr-5" type="checkbox" v-model="changeBorder" />
+              <span>Border</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input class="mr-5" type="checkbox" v-model="changeBorderRadius" />
+              <span>Border Radius</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input class="mr-5" type="checkbox" v-model="changeColor" />
+              <span>Color</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input class="mr-5" type="checkbox" v-model="changeBold"/>
+              <span>Font Bold</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input class="mr-5" type="checkbox" v-model="changeItalic" />
+              <span>Font Italic</span>
+            </label>
+          </li>
+        </ul>
+      <!--color: changeColor,  border: changeBorder, ,  'border_radius': changeBorderRadius, 'font-bold': changeBold, 'font-italic': changeItalic-->
+        <textarea rows="5"
+          :class="{'bg-color': changeBg, border: changeBorder, color: changeColor, 'border_radius': changeBorderRadius, 'font-bold':changeBold, 'font-italic':changeItalic}"></textarea>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
